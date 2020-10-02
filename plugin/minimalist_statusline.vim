@@ -36,16 +36,13 @@ function! MoonflyActiveStatusLine()
     let l:mode = mode()
     let l:statusline = MoonflyModeColor(l:mode)
     let l:statusline .= MoonflyModeText(l:mode)
-    let l:statusline .= "%{bufferline#refresh_status()}".bufferline#get_status_string()
-    let l:statusline .= "%*%=%c "
+    let l:statusline .= "%* %c"
+    let l:statusline .= "%*%=%{bufferline#refresh_status()}".bufferline#get_status_string()
     return l:statusline
 endfunction
 
 function! MoonflyInactiveStatusLine()
-    let l:statusline = " %*%<%{minimalist_statusline#shortFilePath()}"
-    let l:statusline .= "%{&modified?'+\ ':' \ \ '}"
-    let l:statusline .= "%{&readonly?'RO\ ':''}"
-    let l:statusline .= "%*%=%c "
+    let l:statusline = "%=%<%{minimalist_statusline#shortFilePath()}"
     return l:statusline
 endfunction
 
