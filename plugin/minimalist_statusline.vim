@@ -42,7 +42,7 @@ function! MoonflyActiveStatusLine()
 endfunction
 
 function! MoonflyInactiveStatusLine()
-    let l:statusline = "%=%<%{minimalist_statusline#shortFilePath()}"
+    let l:statusline = "%=%<%{minimalist_statusline#shortFilePath()}  "
     return l:statusline
 endfunction
 
@@ -83,13 +83,13 @@ function! s:UpdateInactiveWindows()
 endfunction
 
 function! s:UserColors()
-    exec "highlight User1 cterm=bold ctermbg=2 guibg=0 ctermfg=0"
-    exec "highlight User2 cterm=bold ctermbg=1 guibg=0 ctermfg=0"
-    exec "highlight User3 cterm=bold ctermbg=7 guibg=0 ctermfg=0"
-    exec "highlight User4 cterm=bold ctermbg=5 guibg=0 ctermfg=0"
-    exec "highlight User5 cterm=bold ctermbg=0 guibg=0 ctermfg=4"
-    exec "highlight User6 cterm=bold ctermbg=0 guibg=0 ctermfg=9"
-    exec "highlight User7 cterm=bold ctermbg=0 guibg=0 ctermfg=4"
+    exec "highlight User1 cterm=italic ctermbg=2 guibg=0 ctermfg=0"
+    exec "highlight User2 cterm=italic ctermbg=1 guibg=0 ctermfg=0"
+    exec "highlight User3 cterm=italic ctermbg=7 guibg=0 ctermfg=0"
+    exec "highlight User4 cterm=italic ctermbg=5 guibg=0 ctermfg=0"
+    exec "highlight User5 cterm=italic ctermbg=0 guibg=0 ctermfg=4"
+    exec "highlight User6 cterm=italic ctermbg=0 guibg=0 ctermfg=9"
+    exec "highlight User7 cterm=italic ctermbg=0 guibg=0 ctermfg=4"
 endfunction
 
 augroup MoonflyStatuslineEvents
